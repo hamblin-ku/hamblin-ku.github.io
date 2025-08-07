@@ -10,7 +10,7 @@ My research is primarily focused on the co-evolution of supermassive black holes
 
 I grew up in Silver Spring, Maryland, and recevied my B.S. in physics from the University of Maryland Baltimore County (UMBC) in 2019, before moving to Lawrence, Kansas for graduate school. 
 
-Outside of my academic life, I love star wars (watching and reading!), traditional archery, and performing my servant duties to my two pet rabbits [Yoda](http://localhost:4000/assets/img/Yoda.png) and [Andromeda](http://localhost:4000/assets/img/Andromeda.png).
+Outside of my academic life, I love star wars (watching and reading!), traditional archery, and performing my servant duties to my two pet rabbits [Yoda](assets/img/Yoda.png) and [Andromeda](assets/img/Andromeda.png).
 
 
 >You can contact me via e-mail at **kurt.hamblin@ku.edu**.
