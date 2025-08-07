@@ -4,7 +4,7 @@ image: /assets/img/hydejack-8.png
 hide_description: true
 ---
 # About Me
-I am 6th-year Physics Ph.D candidate at the University of Kansas, where I am advised by [Dr. Allison Kirkpatrick](https://kirkpatrick.ku.edu/).
+I am a 6th-year Physics Ph.D candidate at the University of Kansas, where I am advised by [Dr. Allison Kirkpatrick](https://kirkpatrick.ku.edu/).
 
 My research is primarily focused on the co-evolution of supermassive black holes and their host galaxies. I am particularly interested in determining whether black hole mass assembly and star formation are truly coeval within individual galaxies. My recent work has been focused on [AGNBoost](https://github.com/hamblin-ku/AGNBoost), a probabilistic machine learning framework I have develeoped to both estimate photometric redshifts and identify AGN from JWST NIRCam + MIRI photometry, colors, and derived quantities. I am broadly very interested in machine learning methods, particularly distributional and bayesian methods that provide robust means of constraining prediction uncertainty. 
 
