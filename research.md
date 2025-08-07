@@ -12,7 +12,7 @@ Identifying active galacic nulcei (AGN) from photometry alone can be, unfortunat
 
 <div align="center">
 <video controls style="max-width: 100%; height: auto;">
-  <source src="http://localhost:4000/assets/video/sed_color_animation.mp4" type="video/mp4">
+  <source src="/assets/video/sed_color_animation.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 </div>
