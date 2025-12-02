@@ -51,10 +51,12 @@ author:
 menu:
   - title:             Research
     url:               /research/
+  - title:             Resume
+    url:               /KurtHamblin_Resume.pdf
   - title:             CV
     url:               /KurtHamblin_CV.pdf
-  - title:             Code Snippets
-    url:               /code/
+  - title:             Materials
+    url:               /materials/
   #- title:             Files
   #  url:               /files/
 

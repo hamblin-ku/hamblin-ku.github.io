@@ -8,19 +8,22 @@ hide_description: true
 
 ## <u> AGNBoost: Expanding Color Selection with Machine Learning to identify IR AGN </u>
 
-Identifying active galacic nulcei (AGN) from photometry alone can be, unfortunately, quite difficult. UV-Optical photometry is particularly succeptible to dust obscuration, and even mid-IR AGN color selections have been found to lack either reliability or completeness (e.g., Kirkpatrick+2023). When using just a few closely spaced photometric points, it is quite easy for star forming galaxies (SFGs) to mimic the rising mid-IR power-law characteristic of an AGN, as shown by the animated color-color plot below.
+<p>Identifying active galactic nuclei (AGN) from photometry alone is notoriously challenging. UV-optical photometry is highly susceptible to dust obscuration, and even mid-IR color selections—while more robust—often sacrifice either reliability or completeness (e.g., Kirkpatrick+2023). The problem becomes particularly acute when working with sparse photometric coverage: star-forming galaxies (SFGs) can easily mimic the rising mid-IR power-law characteristic of AGN emission, as illustrated in the animated color-color plot below.</p>
 
-<div align="center">
-<video controls style="max-width: 100%; height: auto;">
-  <source src="/assets/video/sed_color_animation.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-</div>
+<p>Traditional color selection is essentially a rudimentary classification algorithm that draws decision boundaries in 2-D color space. AGNBoost extends this concept to higher dimensions, leveraging all available spectral information through machine learning. The key innovation is using <strong>distributional regression</strong> via XGBoostLSS (März 2019) to simultaneously predict two quantities: <strong>frac<sub>AGN</sub></strong> (the fraction of 3–30 μm mid-IR emission attributable to AGN) and <strong>photometric redshift</strong>.</p>
 
-Color selection is, already, a rudimentary classification algorithm (i.e., drawing a decision boundary in a 2-D space). It is logical then, to try to expand color-selection to higher dimensions, and make use of all available spectral information to perform the selection. Machine learning algorithms of various types are obvious candidates for such an approach, due to their inherent flexibility and modeling performance for tabular classification (or regression) tasks. 
+<p>Unlike standard regression methods that only predict a single value (the conditional mean), XGBoostLSS predicts the <em>entire conditional distribution</em> for each target variable. This means AGNBoost naturally quantifies both the uncertainty in each prediction and the full range of plausible values—critical for AGN identification where degeneracies between SFGs and AGN are common.</p>
 
-AGNBoost expands on this idea with distributional regression via XGBoostLSS (März 2019), to predict $$frac_{AGN}$$, the fraction of mid-IR light attributable to an AGN, and photometric redshift. 
+<p><strong>Key Features:</strong></p>
+<ul>
+  <li>Trained on 10<sup>6</sup> mock galaxies from CIGALE spanning z = 0.01–8.0</li>
+  <li>Uses 11 JWST bands (7 NIRCam + 4 MIRI) plus 55 derived colors as inputs</li>
+  <li>Achieves sub-1% outlier fractions on test data (0.19% for frac<sub>AGN</sub>, 0.63% for redshift)</li>
+  <li>Processes catalogs of ~1000 galaxies in <strong>minutes</strong> (vs. hours-to-days for traditional SED fitting)</li>
+  <li>Provides robust uncertainty estimates combining aleatoric, epistemic, and photometric uncertainties</li>
+  <li>Handles missing photometric bands through integrated imputation methods</li>
+</ul>
 
-For more detail, please view the paper prepreint [arXiv:2506.03130](https://arxiv.org/abs/2506.03130)
+<p>AGNBoost is publicly available on <a href="https://github.com/hamblin-ku/AGNBoost" target="_blank">GitHub</a> and enables rapid AGN candidate identification in large JWST surveys—essential for efficient follow-up observations in the era of wide-field infrared astronomy. For more detail, please view the paper prepreint [arXiv:2506.03130](https://arxiv.org/abs/2506.03130) </p>
 
 
